@@ -4,7 +4,7 @@ import { Grid, Box, Typography ,Button } from '@mui/material';
 
 import MRI from '../components/slider/MRI.jpeg';
 import CSV from '../components/slider/CSV.png';
-
+import Footer from './Footer';
 
 
 
@@ -36,6 +36,7 @@ return(
             </Grid>
        </Grid>
 
+        
         <Typography 
             variant='h2' 
             color='#414466'  
@@ -51,13 +52,14 @@ return(
             display='block'
             gutterBottom
             >
-            By simply uploading your MRI or Your medical information,
-            Our trained machine learning model will predict whether or not you have a brain tumor
+            By simply uploading your MRI or your medical information,
+            our trained machine learning model will predict whether or not you have a brain tumor.
              
         </Typography>
         <Button></Button>
 
-       
+
+      <Footer />
        
     </Box>
 )
