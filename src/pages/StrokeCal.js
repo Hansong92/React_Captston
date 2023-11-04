@@ -36,7 +36,7 @@ const StrokeCal = () => {
         flexDirection: 'column',
         display: 'grid',
         margin: 'auto',
-        marginTop: '0px',
+        marginTop: '64px',
       }}
     >
       <form onSubmit={handleSubmit}>
@@ -63,6 +63,7 @@ const StrokeCal = () => {
                   placeholder="Enter Age"
                   value={formData.age}
                   onChange={handleChange}
+                  sx={{ width: '100px' }}
                 />
               </TableCell>
             </TableRow>
@@ -143,6 +144,7 @@ const StrokeCal = () => {
                   step="0.01"
                   value={formData.glucoseLevel}
                   onChange={handleChange}
+                  sx={{ width: '100px' }}
                 />
               </TableCell>
             </TableRow>
@@ -156,6 +158,7 @@ const StrokeCal = () => {
                   step="0.1"
                   value={formData.bmi}
                   onChange={handleChange}
+                  sx={{ width: '100px' }}
                 />
               </TableCell>
               <TableCell>
