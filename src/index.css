@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.active {
+  background-color: #3498db; /* Change the background color for the active link */
+  color: #ecf0f1; /* Change the text color for the active link */
+  border-radius: 4px; /* Add rounded corners */
+  padding: 5px 10px; /* Add padding to the active link */
+  margin: -5px 0; /* Make the active link a block element to center it */
+}
