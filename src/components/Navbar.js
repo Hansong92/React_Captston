@@ -2,15 +2,17 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import { Link, NavLink as Router } from 'react-router-dom'; // Import Link
-import logo from '../components/slider/logo.png';
+import logo from '../components/images/logo.png';
 
 const Navbar = () => {
   const navBarStyle = {
     position: 'fixed',
+
     left: 0,
     right: 0,
     top: 0,
     background: '#2c3e50',
+    
   };
 
   const buttonStyle = {

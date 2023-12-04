@@ -1,77 +1,76 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Grid, Box, Typography, Button } from '@mui/material';
-import MRI from '../components/slider/MRI.jpeg';
-import CSV from '../components/slider/CSV.png';
+import {Grid, Box, Paper, Typography, Button  } from '@mui/material';
 import Footer from './Footer';
+import ImgSlide from '../components/slider/ImgSlide';
+
+import patient from '../components/images/patient.jpeg'
+import doctors from '../components/images/doctors.png'
+import lab from '../components/images/lab.png'
+
+
+const images = {
+  flex: 1, 
+  margin: '10px', 
+  display: 'flex', 
+  flexWrap: 'wrap'
+}
+
+const explanation= {
+  marginTop: '20px',
+  marginRight:'20px',
+  marginLeft:'20px',
+  flex: 1,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: '1.3rem',
+}
+
+
 
 const Main = () => {
   const containerStyle = {
     margin: 'auto',
-    padding: '50px',
+    padding: '80px',
     justifyContent: 'center',
     alignItems: 'center',
   };
 
-  const titleStyle = {
-    fontSize: '2.5rem',
-    color: '#333',
-    fontFamily: 'Arial, sans-serif',
-    fontWeight: 'bold',
-    marginBottom: '1.5rem',
-  };
 
-  const descriptionStyle = {
-    fontSize: '1.2rem',
-    fontFamily: 'Arial, sans-serif',
-    color: '#444',
-    display: 'block',
-    marginBottom: '1.5rem',
-  };
-
-  const buttonStyle = {
-    backgroundColor: '#0073e6',
-    color: '#fff',
-    fontWeight: 'bold',
-    fontSize: '1.2rem',
-  };
-
-  const imageStyle = {
-    width: '100%',
-    height: 'auto',
-    display: 'block',
-    margin: '0 auto',
-  };
-
-  const mainContainerStyle = {
-    marginTop: '100px', 
-  };
 
   return (
-    <Box style={containerStyle} className="Main" sx={mainContainerStyle}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
-          <img src={MRI} alt="MRI" style={imageStyle} />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <img src={CSV} alt="CSV" style={imageStyle} />
-        </Grid>
+    <Paper style={containerStyle} className="Main" >
+
+      <Grid>
+        <ImgSlide/>
       </Grid>
 
-      <Typography variant="h2" style={titleStyle} gutterBottom>
-        How It Works?
-      </Typography>
-      <Typography variant="h6" style={descriptionStyle} gutterBottom>
-        By simply uploading your MRI or your medical information, our trained machine learning model will predict whether or not you have a brain tumor.
-      </Typography>
-      <Link to="/model-explanation"> 
-  <Button variant="contained" style={buttonStyle}>
-    Learn More
-  </Button>
-</Link>
+      <h1 style={{flex: 1, display:'flex', justifyContent:'center'}}>Target Audiences for Our Website are </h1>
+      <Box 
+        marginTop='50px'
+      >
+
+      <div style={images} >
+        <img src={patient} width="400px" height="250px" alt="patient" />
+        <Typography style={explanation}> Patient or Anyone Who is Concerned About Brain Tumor, can use the features on our website</Typography>
+      </div>
+      
+      <div style={images}>
+        <img src={doctors} width="400px" height="250px" alt="doctors" />
+        <Typography style={explanation}>Doctors and Medical professionals who need a 4th opinion When Evaluating Brain MRI</Typography>
+      </div>
+      
+      <div style={images}>
+        <img src={lab} width="400px" height="250px" alt="lab" />
+        <Typography style={explanation}>Researchers and Lab Professionals Who Study About Brain Tumor </Typography>
+      </div>
+
+
+      </Box>
+     
 
       <Footer />
-    </Box>
+    </Paper>
   );
 };
 
